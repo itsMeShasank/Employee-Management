@@ -1,0 +1,13 @@
+<div class = "insertion-block" ng-controller = "employeeRegistration">
+    <form>
+        <label>First Name</label><br>
+        <input type="text" ng-model="firstName" required/><br>
+        <label>Last Name</label><br>
+        <input type="text" ng-model="lastName" required/><br>
+        <label>Mobile Number</label><br>
+        <input type="number" ng-model="mobileNumber" required minlength="10"/><br>
+        <label>Address</label><br>
+        <input type="textarea" ng-model="address" required/><br>
+        <button ng-click = "saveContent()">Save</button>
+    </form>
+</div>

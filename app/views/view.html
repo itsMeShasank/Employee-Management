@@ -1,0 +1,16 @@
+<div ng-controller="viewController">
+    <table class="employees-content">
+        <thead>
+            <tr>
+                <td>Employee name</td>
+                <td>Phone Number</td>
+                <td>Address</td>
+            </tr>
+        </thead>
+        <tbody ng-repeat="employee in employees">
+            <td>{{ employee.lastName+" "+employee.firstName }}</td>
+            <td>{{ employee.mobileNumber }}</td>
+            <td>{{ employee.address }}</td>
+        </tbody>
+    </table>
+</div>

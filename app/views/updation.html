@@ -1,0 +1,32 @@
+<div class="selection-block" ng-controller="viewController">
+    <div class="update-block">
+        <label>First Name</label>
+        <input type="hidden" ng-model="id"/>
+
+        <input type="text" ng-model="firstName" required/>
+        <label>Last Name</label>
+        <input type="text" ng-model="lastName" required/>
+        <label>mobileNumber</label>
+        <input type="number" ng-model="mobileNumber" required/>
+        <label>Address</label>
+        <input type="textarea" ng-model="address" required/>
+        <button ng-click="save()">update</button>
+    
+    </div>
+    <table class="employees-content">
+        <thead>
+            <tr>
+                <td>Employee name</td>
+                <td>Phone Number</td>
+                <td>Address</td>
+            </tr>
+        </thead>
+        <tbody ng-repeat="employee in employees">
+            <tr ng-click="update($index)">
+                <td>{{ employee.lastName+" "+employee.firstName }}</td>
+                <td>{{ employee.mobileNumber }}</td>
+                <td>{{ employee.address }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
